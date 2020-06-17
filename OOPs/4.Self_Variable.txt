@@ -1,0 +1,66 @@
+Self:
+-----
+self is a reference variable which is always pointing to current object. So, within the python class if we want to access current object then some
+reference variable must be required. So, that reference variable is self.
+
+Example:
+class Test:
+    def __init__(self):
+        print("The Address of object pointed by self: ", id(self))
+    
+t=Test()
+print("The Address of object pointed by t: ", id(t))
+
+'''
+O/P:
+----
+The Address of object pointed by self:  11590736
+The Address of object pointed by t:  11590736
+'''
+
+--> Here a reference variable t is created outside the class Test. So, t can't access the variables which will be declared while creating object. So, a
+reference variable is required inside the class to access the variables which will be declared while creating object. So, self is used as reference
+variable which can access the variables which will be declared while creating object.
+--> To confirm this we have checked the address of both reference variables: t and self. Both points to same object since address is same.
+--> self is the first argument to the constuctor and to the instance method. But when object is created, constructor will be called, but we don't need to 
+pass self argument in both constructor as well as instance method since python PVM will internally pass self argument.
+
+Example:
+class Test:
+    def __init__(self):
+        print('Constructor')
+
+    def value_x(self, x):
+        print("Value of x: ", x)
+
+t=Test()
+t.value_x(10)
+
+'''
+O/P:
+----
+Constructor
+Value of x:  10
+'''
+
+-->Self is used to declare instance variable of object and to access value of instance variable:
+Example:
+class Student:              #Class
+    '''Demo program'''      #doc string
+    def __init__(self):     #Special Methods - Constructor
+        self.name='Amit'    #Variables
+        self.rollno=101     #Variables
+        self.marks=90       #Variables
+
+    def print_method(self): #Methods
+        print("Name: ",self.name)
+        print("Roll No: ",self.rollno)
+        print("Marks: ",self.marks)
+
+s=Student()
+print("Print using reference variable which can access variables")
+print("Name: ",s.name)
+print("Roll No: ",s.rollno)
+print("Marks: ",s.marks)
+print("\nPrint using reference variable which can access Methods")
+s.print_method()

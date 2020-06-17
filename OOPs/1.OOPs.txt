@@ -1,0 +1,29 @@
+Class: A design/blueprint/template to create an object is called "Class".
+Object: An instance or physical entity of a class is called an "Object".
+
+class Syntax:
+--------------
+class classname:
+    '''Documentation string'''
+    #Special method: def __init__(self):
+    #Methods
+    #Variables
+
+Object syntax:
+---------------
+reference_variable=classname()
+
+Reference Variable:
+-------------------
+It is an alias name of an object. With Reference Variable, we can call Methods and Variable of an object.
+
+Class can have both Variables and Methods:
+There are 3 types of Methods:
+1. Instance Method
+2. Class Method
+3. Static Method
+
+There are 3 types of Variables:
+1. Instance Variable
+2. Local Variable
+3. Static Variable
