@@ -64,3 +64,27 @@ print("Roll No: ",s.rollno)
 print("Marks: ",s.marks)
 print("\nPrint using reference variable which can access Methods")
 s.print_method()
+
+-->self is not a keyword in Python.
+Example:
+class Student:
+    def __init__(delf, n, r, m):
+        delf.name=n
+        delf.rollno=r
+        delf.marks=m
+    
+    def print_method(delf):
+        print("Name: ", delf.name)
+        print("Roll No: ", delf.rollno)
+        print("Marks: ", delf.marks)
+    
+s=Student("Gyan", 101, 90)
+s.print_method()
+
+'''
+O/P:
+Name:  Gyan
+Roll No:  101
+Marks:  90
+'''
+But it is convention to use self keyword in python.
