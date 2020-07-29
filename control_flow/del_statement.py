@@ -58,8 +58,40 @@ s2=s1
 s3=s2
 del s1,s2,s3
 #print(s1)
-print(s2)
-print(s3)
+#print(s2)
+#print(s3)
 '''
-All reference variables are deleted
+All reference variables are deleted and object is now available for garbage collection. So, once all reference variables pointing to object is deleted then only object will be available for garbage collection.
+'''
+'''
+del vs immutable objects:
+-------------------------
+immutable objects are the objects on which we can't perform any changes
+'''
+s="durga" #We can delete reference variable s by using: del s
+#del s #Valid	
+#del s[0] #But we can't delete the elements present in immutable object like del s[0]<--Invalid
+
+'''
+del vs None:
+------------
+By using del, reference variable will be deleted and object will be by default available for garbage collection if there is no other reference variable pointing to that object.
+
+x=10
+del x
+print(x)  #NameError: After deleting variable we can't access that variable
+
+But when we use None, then for example x=10, x is pointing to object 10. But when we do x=None, then x points to None object instead of 10. So, 10 will be available for garbage collection and x points to None.
+
+x=10
+x=None
+print(x)  #None
+'''
+print("=========================="*3)
+print("Example -4")
+x=10
+x=None
+print(x)  #None
+'''
+Advantage: The chance of failing python program with memory problems will be very less so that python application will become more robust.
 '''
