@@ -1,0 +1,17 @@
+Q. What is the difference between for and while loop in python?
+--> We should use for loop for every item which is present in a sequence and we want to perform any activity on that sequence then we should use for loop. For loop is always based on some sequence(list, range, tuple, string).
+
+While loop is always based on some condition. As long as some condition is true then only while is going to be executed.
+
+Repeat code for every item in sequence: for loop
+
+Repeat code as long as some condition is true: while loop
+
+Q. How to exit from the loop?
+--> By using break statement based on some condition.
+
+Q. How to skip some iteration inside loop?
+--> By using continue statement. 
+
+Q. When else part will be executed in loops?
+--> else will be always executed if the loop block is executed without break.

@@ -1,0 +1,24 @@
+Transfer Statement:
+-------------------
+For transfering control from 1 place to another place, we need to go for transfer statement. There are 2 trabsfer statement:
+1. break
+2. continue
+
+1. break:
+If we want to break loop execution based on some condition then we can use break.
+Example:
+
+for i in range(10):
+  if i==7:
+    break
+  print(i)
+
+2. continue:
+To skip current iteration based on some condition and continue for the next iteration, continue statement is used.
+
+Example:
+
+for i in range(10):
+  if i==7:
+    continue
+  print(i)
