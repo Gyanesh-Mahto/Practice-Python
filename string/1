@@ -1,0 +1,10 @@
+# WAP to print index of all occurances of the given string
+s=input("Please enter your string: ")
+sub_s=input("Please enter substring to find: ")
+i=s.find(sub_s)
+if i==-1:
+  print("Substring not available")
+else:
+  while i!=-1:
+    print(i)
+    i=s.find(sub_s,i+len(sub_s), len(s)) 

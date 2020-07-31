@@ -1,0 +1,125 @@
+String:
+-------
+The most commonly used object in any project and in any programming language is String only. Hence we should aware complete information 
+about String data type.
+
+input method returns string input by default
+Example:
+--------
+x=input("Please enter name: ")
+So, this input method also returns string data type by default.
+
+
+Even command line arguments also return input in string type, that's why we need to type case them
+Example:
+-------
+from sys import argv
+
+result=int(argv[1])+int(argv[2])
+print(result)
+
+What is String?
+Any sequence of characters within either single quotes or double quotes is considered as a String.
+Syntax:
+s = 'Gyanesh'	#Single quotes
+s = "Gyanesh"	#Double quotes
+
+Note: In most of other languges like C, C++, a single character with in single quotes is treated as char data type value. But in Python we 
+are not having char data type.Hence it is treated as String only.
+
+Example:
+-------
+ch='a'
+print(type(ch))
+
+
+We can use triple quotes for string as well. It is used for 2 purposes. That are as follows:
+1. multi-line string literal:
+-----------------------------
+How to define multi-line String Literals?
+We can define multi-line String literals by using triple single or double quotes.
+Eg:
+>>> s = '''Gyanesh
+Mahto
+Anandkumar'''
+
+2. We can also use triple quotes to use single quotes or double quotes as symbol inside String literal.
+
+Example:
+-------
+s = 'This is ' single quote symbol'  #Invalid
+s = 'This is \' single quote symbol'  #Valid
+s = "This is ' single quote symbol"  #Valid
+s = 'This is " double quotes symbol'  #Valid
+s = 'The "Python Notes" by 'durga' is very helpful'  #Invalid
+s = "The "Python Notes" by 'durga' is very helpful"  #Invalid
+s = 'The \"Python Notes\" by \'durga\' is very helpful'  #Valid
+s = '''The "Python Notes" by 'durga' is very helpful'''  #Valid
+
+How to Access Characters of a String?
+We can access characters of a string by using the following ways.
+1) By using index
+2) By using slice operator
+1) Accessing Characters By using Index:
+Python supports both +ve and -ve Index.
++ve Index means Left to Right (Forward Direction)
+-ve Index means Right to Left (Backward Direction)
+Eg: s = 'durga'
+>>> s='durga'
+>>> s[0]
+'d'
+>>> s[4]
+'a'
+>>> s[-1]
+'a'
+>>> s[10]
+IndexError: string index out of range
+Note: If we are trying to access characters of a string with out of range index then we will
+get error saying: IndexError
+Q) Write a Program to Accept some String from the Keyboard and display its
+Characters by Index wise (both Positive and Negative Index)
+test.py:
+1) s=input("Enter Some String:")
+2) i=0
+3) for x in s:
+4) print("The character present at positive index {} and at nEgative index {} is {}".format(i,i-len(s),x))
+5) i=i+1
+
+Output: D:\python_classes>py test.py
+Enter Some String:durga
+The character present at positive index 0 and at nEgative index -5
+The character present at positive index 1 and at nEgative index -4
+The character present at positive index 2 and at nEgative index -3
+The character present at positive index 3 and at nEgative index -2
+The character present at positive index 4 and at nEgative index -1
+4
+is d
+is u
+is r
+is g
+is a
+
+Begin Index: From where we have to consider slice (substring)
+End Index: We have to terminate the slice (substring) at endindex-1
+Step: Incremented Value.
+Note:
+If we are not specifying bEgin index then it will consider from bEginning of the string.
+If we are not specifying end index then it will consider up to end of the string.
+The default value for step is 1.
+1) >>> s="Learning Python is very very easy!!!"
+2) >>> s[1:7:1]
+3) 'earnin'
+4) >>> s[1:7]
+5) 'earnin'
+6) >>> s[1:7:2]
+7) 'eri'
+8) >>> s[:7]
+9) 'Learnin'
+10) >>> s[7:]
+11) 'g Python is very very easy!!!'
+12) >>> s[::]
+13) 'Learning Python is very very easy!!!'
+14) >>> s[:]
+15) 'Learning Python is very very easy!!!'
+16) >>> s[::-1]
+17) '!!!ysae yrev yrev si nohtyP gninraeL'
