@@ -4,9 +4,7 @@
 #  Output: AZBCDEF
 
 s=input("Please enter your string: ")
-
 output=s[0]
-
 for x in s:
       if x not in output:
         output=output+x
